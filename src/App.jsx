@@ -55,7 +55,7 @@ useEffect(() => {
         navigate("/login");
       }
     }
-  }, [user, loading, navigate]);
+  }, [ user, loading, navigate ]);
 
   if (loading) {
     return <Spin size="large" fullscreen={true}/>
