@@ -74,7 +74,7 @@ useEffect(() => {
       <Route path="/detail/:id" element={<Main products={products} />} />
       <Route path="/detail/shopping_card" element={<ShoppingCard products={products} />} />
       <Route path="/detail/shopping_card/order" element={
-        <LoginProtected user={user}>
+        <LoginProtected user={ user } >
           <Order />
         </LoginProtected>
       } />
