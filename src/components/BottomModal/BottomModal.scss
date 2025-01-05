@@ -1,0 +1,192 @@
+// Variables
+$modal-title-bg-color: #eb7025 !important;
+$modal-title-margin-bottom: 10% !important;
+$btn-bg-color: black;
+$btn-hover-bg-color: #eb7025 !important;
+$btn-color: white;
+$btn-hover-color: white !important;
+$scrollbar-width: 5px !important;
+$scrollbar-thumb-bg-color: #d6dee1 !important;
+$line-height: 1em;
+$modal-margin-bottom: 1em;
+$modal-gap: 10px;
+
+// Mixin for flex display
+@mixin display-flex($direction: row, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+// Mixin for scrollbar styles
+@mixin scrollbar-styles($width, $thumb-bg-color) {
+  // ::-webkit-scrollbar {
+  //   width: $width;
+  //   border-radius: 10px ;
+  //   background-color: rgb(73, 72, 72) !important;
+  // }
+  // ::-webkit-scrollbar-track {
+  //   background-color: transparent !important;
+  // }
+  // ::-webkit-scrollbar-thumb {
+  //   background-color: $thumb-bg-color;
+  //   border-radius: 10px !important;
+  // }
+}
+
+// Reusable button styles
+@mixin button-styles($bg-color, $hover-bg-color, $color, $hover-color) {
+  background-color: $bg-color;
+  color: $color;
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-color;
+  }
+}
+
+// Styles
+.bottom_modal {
+  .ant-modal-content .ant-modal-title,
+  .ant-modal .ant-modal-header {
+    margin-bottom: $modal-title-margin-bottom;
+  }
+  .ant-modal-title {
+    background-color: $modal-title-bg-color;
+  }
+}
+
+.overflow-container {
+  @include display-flex;
+  overflow-y: scroll;
+  max-width: 70%;
+  width: 70%;
+
+  .modal_data {
+    width: 300px;
+    min-width: 250px;
+    height: 100px;
+    margin: 0.268em;
+
+    .title_delete {
+      &:hover {
+        cursor: pointer;
+        .modal_data & {
+          background-color: red;
+        }
+      }
+    }
+
+    .shop_input {
+      .button_container {
+        display: flex;
+        align-items: center;
+        background: $btn-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+
+        button {
+          width: 80px;
+          height: 50px;
+          border: none;
+          background-color: $modal-title-bg-color;
+          color: $btn-color;
+          font-size: 20px;
+          cursor: pointer;
+          outline: none;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: black !important;
+          }
+        }
+        input {
+          width: 70px;
+          height: 50px;
+          border: none;
+          text-align: center;
+          font-size: 18px;
+          outline: none;
+        }
+      }
+    }
+
+    .modal_title {
+      white-space: wrap;
+      overflow: hidden;
+      width: 4px;
+      text-overflow: ellipsis;
+      font-weight: 500;
+      &:hover {
+        color: $modal-title-bg-color;
+        cursor: pointer;
+      }
+    }
+
+    .vertical_line {
+      margin-left: 1.4em;
+      margin-top: 0em;
+      height: 5em;
+    }
+
+    @include scrollbar-styles($scrollbar-width, $scrollbar-thumb-bg-color);
+  }
+}
+
+.bottom_broder {
+  border-bottom: 1px solid lightgrey;
+  margin: 4px;
+}
+
+.product_details_modol {
+  margin-left: 1.5em;
+  line-height: $line-height;
+  .ant-typography {
+    margin-left: 1em;
+  }
+}
+
+.ant-modal-title {
+  background-color: $modal-title-bg-color;
+  margin-bottom: 0%;
+}
+
+.modal_btn {
+  .ant-btn {
+    margin-top: $modal-margin-bottom !important;
+    border: none;
+    @include button-styles(
+      $btn-bg-color,
+      $btn-hover-bg-color,
+      $btn-color,
+      $btn-hover-color
+    );
+  }
+}
+
+.total_modal {
+  @include display-flex(row, wrap);
+}
+
+@media only screen and (max-width: 62em) {
+  .modal_btn {
+    margin-bottom: $modal-margin-bottom;
+    @include display-flex(row, nowrap);
+    gap: $modal-gap;
+  }
+  .total_modal {
+    background-color: #9feb25;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .total_modal {
+    flex-direction: column;
+    gap: $modal-gap;
+  }
+}
+
+.total_modal {
+  @include display-flex(row, wrap);
+}

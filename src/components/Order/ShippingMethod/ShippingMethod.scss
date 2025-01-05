@@ -1,0 +1,111 @@
+@import "../../SCSS/colorVariables";
+.shipping_method {
+  border: 1px solid $imge-bg-color;
+  width: 100%;
+  max-width: 100%;
+  background-color: $imge-bg-color;
+  padding: 1.5em;
+
+  .shipping_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 1px solid #979797;
+    background-color: $white-color;
+    padding: 2px;
+
+    .ant-radio-inner {
+      position: absolute;
+      top: -0.887em;
+      left: -0.1em;
+      background-color: $secondary-color;
+      &::after {
+        background-color: $secondary-color;
+      }
+    }
+  }
+  .shipping_carrier {
+    .ant-typography {
+      font-size: 1em;
+      font-weight: 700;
+    }
+  }
+
+  .sipping_delivery {
+    margin-left: 3.5em;
+    .ant-typography {
+      font-size: 1em;
+    }
+  }
+}
+
+.shipping_bottom {
+  margin-top: 1em;
+  margin-left: 0.547em;
+
+  .ant-input {
+    margin-top: 0.568em;
+    border-radius: 0%;
+    &:focus {
+      border: 2px solid $primary-color;
+    }
+  }
+}
+
+.btn_shipping {
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(
+      :disabled
+    ):not(.ant-btn-disabled) {
+    margin-top: 1em;
+    font-size: 1.1em;
+    border: none;
+    background-color: $primary-color;
+    border-radius: 0%;
+    color: $white-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: $white-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .shipping_flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .shipping_res {
+    display: flex;
+    gap: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .shipping_circle {
+    display: none;
+  }
+  .shipping_method {
+    .shipping_res {
+      .shipping_ {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0px !important;
+      }
+      .shipping_ {
+        ._carrier {
+          margin-bottom: 0%;
+          padding: 0% !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .shipping_method {
+    .shipping_res {
+      display: flex;
+      gap: 0px !important;
+    }
+  }
+}

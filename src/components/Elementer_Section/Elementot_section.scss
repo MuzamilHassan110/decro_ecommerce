@@ -1,0 +1,38 @@
+@import "../SCSS/colorVariables";
+
+.container {
+  .Elementor_section {
+    height: 40vh;
+    margin-top: 4rem;
+    background-color: $section-color;
+    max-width: 100%;
+    white-space: nowrap;
+    .elementor_description {
+      margin: 0px ;
+    }
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .elementor_description {
+    font-size: 1.34em;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .Elementor_section {
+    flex-direction: column ;
+    text-align: center ;
+    .elementor_description {
+      font-weight: 600 ;
+      font-size: 1em ;
+    }
+  }
+}
+@media only screen and (max-width: 30em) {
+  .Elementor_section {
+    .elementor_description {
+      font-weight: 600 ;
+      font-size: smaller ;
+    }
+  }
+}

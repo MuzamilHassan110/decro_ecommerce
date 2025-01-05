@@ -1,0 +1,54 @@
+.settings_container {
+  border: 1px solid rgb(216, 210, 210);
+  background-color: white;
+  width: 18em;
+  padding: 10px;
+
+  .ant-typography {
+      font-size: 11px;
+      font-weight: 400;
+      margin-top: 0%;
+      line-height: 0% !important;
+  }
+
+  .box {
+      box-sizing: border-box;
+      margin-top: 0px;
+  }
+
+  .country {
+      margin-top: 0% !important;
+      width: 8em;
+      border: 1px solid rgb(216, 210, 210);
+      height: 4em;
+  }
+
+  .currency {
+      border: 1px solid rgb(216, 210, 210);
+      width: 8em;
+      height: 2em;
+
+      .eur_usd {
+          margin-top: 1em;
+
+          &:hover {
+              cursor: pointer;
+          }
+      }
+  }
+  .login_section{
+    margin-left: 1.5em;
+    margin-top: 1.890em;
+    .ant-typography {
+        
+      font-size: 13px;
+      color: #8a8888;
+      line-height: 1px !important;
+      padding: 0% !important;
+  }
+  .no-gap{
+    line-height: 2.5 !important; 
+
+  }
+  }
+}

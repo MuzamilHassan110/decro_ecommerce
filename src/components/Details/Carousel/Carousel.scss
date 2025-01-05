@@ -1,0 +1,36 @@
+@import "../../SCSS/colorVariables";
+
+@mixin _image($width, $heigth, $bg, $broder-raduis) {
+  width: $width;
+  height: $heigth;
+  background-color: $bg;
+  border-radius: $broder-raduis;
+  background-color: $imge-bg-color;
+}
+.main {
+  .bottom_image {
+    display: flex;
+    max-width: 100%;
+  }
+
+  .carousel_singal_image {
+    @include _image(100%, 300px, $white-color, 0.725em);
+  }
+  .pro-image {
+    @include _image(100%, 200px, $white-color, 0.225em);
+  }
+  .carousel_singal_image {
+    height: 100%;
+  }
+  .prod-button:hover {
+    border: 1px solid $primary-color;
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    .bottom_image {
+      max-width: 50%;
+    }
+  }
+}

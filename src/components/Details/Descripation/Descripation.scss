@@ -1,0 +1,234 @@
+@import "../../SCSS/colorVariables";
+
+$broder-color: #47ae74;
+$color-itme: #777777;
+$color-save: #f39d72;
+$color-star: #ffb14b;
+
+@mixin display($display: flex, $align: center) {
+  display: $display;
+  align-items: $align;
+}
+
+%common-properties {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #b6b1b1;
+}
+
+.main-container {
+  max-width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.stock {
+  border: 2px $broder-color solid;
+  padding: 2px 10px;
+  color: $broder-color;
+}
+.item {
+  color: $color-itme;
+  margin-top: 4px;
+}
+.teapot {
+  font-weight: 900;
+  margin-top: 4px;
+}
+
+.rate .ant-rate-star {
+  font-size: 12px;
+  color: $color-star ;
+}
+
+.review-link {
+  @include display(inline-block, center);
+  text-decoration: none;
+  gap: 8px;
+  &:hover {
+    color: $color-star;
+  }
+}
+
+.price {
+  @include display(flex, baseline);
+  margin-top: 1rem;
+  .new-price {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .del-price {
+    color: $color-itme;
+    font-size: 1.3rem;
+  }
+  .save {
+    border: 1px solid $color-save;
+    background-color: $color-save;
+    color: $white-color;
+    padding: 0px 3px;
+    font-size: small;
+    white-space: nowrap;
+  }
+}
+
+.size-box {
+  @include display();
+  gap: 2rem;
+
+  .size {
+    margin-right: 5rem;
+  }
+  .size-item {
+    margin-top: 1rem;
+    border: 1px solid $white-color;
+    padding: 8px 18px;
+    box-shadow: 3px 3px 3px 1px rgba(36, 34, 34, 0.1);
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
+.white-color {
+  @extend %common-properties;
+  background-color: $white-color;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+  &:hover {
+    border: 1px solid $primary-color;
+    cursor: pointer;
+  }
+}
+
+.black-color {
+  @extend %common-properties;
+  background-color: $primary-color;
+  cursor: pointer;
+}
+.add-to-product{
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) {
+ 
+    font-size: 1em;
+    border-radius: 0%;
+    position: relative;
+    top: 10px ;
+    bottom: 10px;
+    padding: 1.7rem;
+    background-color: $primary-color ;
+    color: $white-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    // width: 30em !important  ;
+  
+    &:hover {
+      background-color: $secondary-color ;
+      color: $white-color ;
+      border-color: $secondary-color ;
+      transition: none ;
+    }
+  }
+}
+.icon-style {
+  transition: transform 0.2s ease;
+  &:hover {
+    cursor: pointer;
+    color: $color-star;
+    transform: translateY(2px);
+  }
+}
+
+.category {
+  white-space: nowrap;
+}
+
+.flex_issus {
+  line-height: 2em;
+}
+
+@media only screen and (max-width: 62em) {
+  
+  .ant-tabs-tab-btn {
+    font-size: 0.825em ;
+  
+  }  
+ 
+}
+
+@media only screen and (max-width: 48em) {
+  .ant-tabs-tab-btn {
+    font-size: 0.625em ;
+    
+  }
+  .des-title{
+    .teapot{
+     font-size: 2em ;
+    
+    }
+  }
+}
+@media (max-width: 440px) {
+  .polic_details {
+    font-size: 0.778em ;
+    margin-right: 3rem ;
+  }
+  }
+
+
+// .btn-product-add {
+//   max-width: 100%;
+// }
+
+@media (max-width: 1050px) {
+  .size-box {
+    gap: 1rem;
+    .size {
+      margin-right: 4rem;
+    }
+    .size-item {
+      padding: 6px 10px;
+    }
+  }
+  .quntity_box {
+    gap: 3rem;
+  }
+  .ant-input-number {
+    width: 100% !important;
+    margin-left: 8rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .reviews-container {
+    @include display();
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+  }
+  .colors {
+    display: flex;
+    gap: 10px !important;
+  }
+  .ant-tabs-tab-btn {
+    font-size: 0.825em ;
+  }
+  .manufacturer {
+    display: flex;
+    gap: 3.6em;
+  }
+  .categories {
+    display: flex;
+    gap: 1.5em ;
+  }
+
+  .shares {
+    margin-top: 1em;
+  }
+  .des-title{
+    .teapot{
+     font-size: 1.5em !important;
+    }
+  }
+}

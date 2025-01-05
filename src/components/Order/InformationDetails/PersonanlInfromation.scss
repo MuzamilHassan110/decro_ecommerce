@@ -1,0 +1,182 @@
+// .ant-collapse {
+//     border: none !important;
+//     background-color: white !important;
+//     border-bottom: none !important;
+//     .ant-collapse-header-text{
+//         border-bottom: none !important;
+//         font-weight: 700;
+//         font-size: 1rem;
+//     }    
+// }
+
+@import "../../SCSS/colorVariables";
+
+.info_main{
+  .info-circle{
+    position: relative;
+    left: 2.2rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $white-color ;
+   border: 1px solid $gray;
+   &:hover{
+    background-color: $secondary-color;
+    cursor: pointer;
+   }
+}
+
+  .text-info {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $shop_border;
+    font-size: 16px;
+}
+    
+    .ant-select.ant-select-in-form-item {
+        width: 100% ;
+        max-width: 82% ;
+       
+        &:focus {
+          background-color: aqua;
+        }
+      }
+    .ant-col {
+        display: flex;
+        .ant-input {
+          border-radius: 0%;
+          width: 22em;
+          &:focus {
+            border: 2px solid rgb(194, 100, 83) ;
+          }
+        }
+      }
+    .ant-form-item .ant-form-item-label > label::after {
+        content: none ;
+      }
+
+      .info_password{
+        position: relative;
+        .ant-col {
+            display: flex;
+            .ant-input {
+               border: none !important;                
+               width: 17.32em;
+              &:focus {
+                border: 1px solid ;
+              }
+            }
+          }
+          .ant-input-affix-wrapper{
+            width: 19em !important;
+            border-radius: 0%;
+           
+          }
+          :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+           {        
+            position: absolute;
+            bottom: 0em;
+            left: 17.26em;
+            z-index: 20;
+            background-color: #363A42;
+            border-radius: 0% ;
+            color: $white-color;
+            height: 2.4em;
+            &:hover {
+               background-color: #363A42;
+               color: $white-color;
+               border: 0% ;
+               box-shadow: none ;
+               border-color: #363A42 ;
+
+            }
+            
+          }
+      }
+      .info_bottom_details{
+       margin-top: 1.4em;
+      }
+
+}
+.btn_info{
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+  {
+   margin-top: 1em ;
+   background-color: $primary-color ;
+   border-radius: 0% ;
+   color: $white-color ;
+  height: 3em ;
+  font-weight: 600;
+  &:hover{
+    background-color: $secondary-color ;
+    border-color: $secondary-color;
+  }
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  // .collopase{
+  //   font-size: 1.5em !important;
+  // }
+  
+  
+}
+@media only screen and (max-width: 578px) {
+  // .collopase{
+  //   font-size: 1.1em !important;
+  // }
+  .info_flex_btn{
+    display: flex;
+    flex-direction: column ;
+       gap: 1em;
+  }
+  
+}
+@media only screen and (max-width: 480px) {
+  .info_account{
+    display: flex;
+    flex-direction: column;
+ 
+  }
+  
+  .info_main .ant-col .ant-input{
+   width: 16em ;
+ 
+  }
+  .info_main .info_password .ant-col .ant-input {    
+    width: 12em ;
+  }
+  .info_main .info_password{
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+{
+  position: absolute;
+  left: 13.5em ;
+}
+   
+  }
+}
+
+@media (max-width: 380px){
+  .info_main .info_password{
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+{
+  position: absolute;
+  left: 12.50em ;
+}
+   
+  }
+}
+
+@media (max-width: 350px){
+  .info_main .info_password{
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+{
+  position: absolute;
+  left: 10.50em ;
+}
+   
+  }
+}
+

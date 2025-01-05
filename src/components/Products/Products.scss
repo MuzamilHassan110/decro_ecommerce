@@ -1,0 +1,96 @@
+@mixin position($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+.container {
+  max-width: 80% !important;
+  margin: 2rem auto;
+  .custom-card {
+    border: 0rem;
+    overflow: hidden;
+    position: relative;
+
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+
+  .custom-card {
+    width: calc(100% - 12px);
+  }
+
+  .ant-card-meta-title {
+    @include position(10px, 10px);
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .ant-card {
+    .ant-card-body {
+      padding: 0px !important;
+    }
+  }
+
+  .card {
+    width: 100%;
+  }
+  .second_row {
+    margin-left: 0px !important;
+  }
+
+  .ant-card .ant-card-body {
+    padding: 1px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .custom-card:hover .img {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .ant-card-meta-detail {
+    .ant-card-meta-title {
+      @include position(5px, 6px);
+      font-weight: 500;
+      font-size: 1em;
+    }
+  }
+}
+@media only screen and (max-width: 48em) {
+  .image_side {
+    max-width: 300%;
+  }
+  .ant-card-meta-detail {
+    .ant-card-meta-title {
+      @include position(4px, 4px);
+      font-weight: 700;
+    }
+  }
+}
+@media only screen and (min-width: 36em) and (max-width: 48em) {
+  .ant-card-meta-detail {
+    .ant-card-meta-title {
+      font-size: 0.79rem;
+    }
+  }
+}
+@media only screen and (max-width: 36em) {
+  .ant-card-meta-detail {
+    .ant-card-meta-title {
+      @include position(0px, 6px);
+      font-weight: 600;
+      font-size: 0.849rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .ant-card-meta-detail {
+    .ant-card-meta-title {
+      font-size: 0.749rem;
+    }
+  }
+}

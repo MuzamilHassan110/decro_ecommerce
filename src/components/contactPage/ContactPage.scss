@@ -1,0 +1,86 @@
+@import "../SCSS/colorVariables";
+
+$broder-container: 1px solid $title-color;
+
+@mixin w_h_b($width, $heigth, $border) {
+  width: $width;
+  height: $heigth;
+  border: $border;
+}
+.contact-container {
+  margin: 2rem;
+  padding: 2rem;
+
+  .info-container {
+    padding: 1em;
+    @include w_h_b(100%, 100%, $broder-container);
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+    }
+    .info-icon {
+      margin-right: 2em;
+    }
+    .hover_contact {
+      &:hover {
+        color: $secondary-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .submit-form {
+    border: $broder-container;
+    height: 100%;
+    padding: 2em;
+    margin: auto;
+    .input_contact {
+      @include w_h_b(100%, 40px, $broder-container);
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    textarea {
+      @include w_h_b(100%, 6em, 1px solid $shop_border);
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+
+    .contact_button {
+      margin-top: 0px;
+      margin-right: 4em;
+      background-color: $primary-color;
+      color: $white-color;
+      border-radius: 0%;
+      width: 6em;
+      height: 3em;
+      padding: 10px;
+      padding-left: 1.45em;
+      &:hover {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+    }
+  }
+  .error {
+    color: $red-color;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .submit-form {
+    margin-top: 1em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .info-container {
+    .contact_title {
+      font-size: 1em;
+    }
+  }
+}

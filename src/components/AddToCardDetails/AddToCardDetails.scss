@@ -1,0 +1,73 @@
+@import "../SCSS/colorVariables";
+
+%common-properties {
+  border-radius: 0px;
+  height: 3.5em;
+  width: 100%;
+  border: none !important;
+}
+@mixin display-flex($display: flex, $flex-direction: column) {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-modal {
+  .ant-modal-content {
+    padding: 0px;
+  }
+  .ant-modal-title {
+    background-color: rgba(27, 27, 27, 0.938);
+    color: white;
+    padding: 12px;
+    text-align: center;
+     }
+  .ant-typography {
+     margin: 0% !important ;
+    line-height: 1.9rem;
+    font-size: medium;
+  }
+  .ant-modal-close {
+    color: #f6f6f6;
+    position: absolute;
+    top: 5px;
+  }
+
+  .ant-btn-default.btn-proceed-to {
+    @extend %common-properties;
+    background-color: black;
+    color: $white-color;
+    margin-bottom: 3.5em;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $white-color;
+    }
+  }
+
+  .ant-btn-default.btn-continue-shpping {
+    @extend %common-properties;
+    font-weight: 700;
+    background-color: #f6f6f6;
+
+    &:hover {
+      background-color: #9b979763;
+      color: $primary-color;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 575px) {
+  .cart_title_price {
+    @include display-flex(flex, column);
+       align-items: center;
+  }
+  .cart_details {
+    @include display-flex(flex, column);
+    padding: 1em;
+  }
+  .ant-modal-title {
+    font-size: 0.764em !important;
+  }
+}

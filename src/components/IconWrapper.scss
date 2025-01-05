@@ -1,0 +1,41 @@
+// .ant-float-btn {
+//     position: fixed;
+//   }
+//   :where(.css-dev-only-do-not-override-djtmh8).ant-float-btn{  
+//    box-shadow: none !important;
+//     background-color: white !important;
+  
+   
+//   }
+//   .ant-float-btn-default .ant-float-btn-body:hover{
+//     background-color: white !important;
+//     padding-right: 40px !important;
+//   }
+//   .ant-float-btn-icon{
+//        padding-right: 30px !important;
+//   }
+.float_button{
+  .ant-float-btn{
+    height: 3.525em !important;
+    width: 3.525em !important;
+   }
+  .ant-float-btn-icon{
+           padding-right: 30px !important;
+      }
+}
+ 
+  // @media only screen and (max-width: 75em) {
+  //  .float_button{
+  //   .ant-float-btn{
+  //     // right: 72em !important;
+  //   }
+  //  }
+  // }
+
+  // @media only screen and (max-width: 48em) {
+  //   .float_button{
+  //    .ant-float-btn{
+  //     //  right: 45em !important;
+  //    }
+  //   }
+  //  }

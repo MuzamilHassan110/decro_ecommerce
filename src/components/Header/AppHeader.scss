@@ -1,0 +1,240 @@
+@import "../SCSS//colorVariables";
+
+@mixin display-flex($display: flex, $justify: center, $align: center ){
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin commen-text-style($weigth: 700, $line-heigth: 1.5em){
+  font-weight: $weigth;
+  line-height: $line-heigth;
+}
+
+@mixin both($top: 4rem, $width: 2.5em, $heigth: 2em, $font-size: small){
+  position: absolute;
+  top: $top;
+  width: $width;
+  height: $heigth;
+  font-size: $font-size;
+}
+
+.app-header {
+  background-color: $white-color;
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  .header {  
+        @include display-flex(flex,space-between ,center );
+        gap: 2;
+  } 
+
+  .title-text {
+    @include commen-text-style(700, 1.9rem);
+    padding-bottom: 2rem;
+  }
+  
+  .title-name {
+    @include commen-text-style(600, 3.5rem);
+    color: $title-color;
+    font-size: 1em;
+    white-space: nowrap;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+    &:hover {
+      cursor: pointer;
+      color: $secondary-color;
+    }
+  }
+  
+  .login_sign_header {
+    margin-right: 1em;
+    display: flex;
+    gap: 8;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+// <____________________________________________________________________________________>
+
+
+.toggle-img {
+  @include both();
+  display: none ; 
+}
+
+
+.search-icon {
+  font-size: 1.45rem;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    color: $secondary-color;
+  }
+}
+// .shopping_cart {
+//   color: $primary-color !important;
+//   font-weight: 900 !important;
+//   &:hover {
+//     cursor: pointer;
+//     color: $secondary-color !important;
+//   }
+// }
+
+// .ant-popover .ant-popover-content {
+//   width: calc(100vw - 20px) !important;
+//   height: calc(100vh - 10px) !important;
+// }
+
+
+@mixin position($position, $top, $rigth){
+  position: absolute;
+  top: $top;
+  right: $rigth;
+}
+
+.badge {
+  @include both(6px,18px ,18px , 12px);
+  position: absolute;
+  right: -15px;
+  background-color: #eb7025;
+  color: $white-color;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-weight: 100 ;
+  @include display-flex(flex,center ,center )
+ 
+}
+.login_img {
+  background-color: transparent ;
+  width: 20px ;
+  height: 20px ;
+  margin-right: 1em;
+  .login_name {
+    padding: 0.678em ;
+  }
+}
+
+
+.searchBar {
+  @include position(absolute, 5em, 25em);
+   z-index: 90;
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+  {
+    border: none ;
+    background-color: $secondary-color ;
+    color: $white-color ;
+    font-size: 2em ;
+    border-radius: 0% ;
+    width: 2em;
+    height: 1.5em;
+    position: absolute;
+    right: -3px;
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color ;
+    }
+  }
+ 
+  .search {
+    @include position(absolute,10px ,10px );   
+  }
+}
+.search_item {
+  width: 14em ;
+  height: 3em;
+}
+
+.user_details {
+  position: relative;
+  &:hover {
+    .settings {
+      display: block;
+    }
+  }
+  .settings {
+    position: absolute;
+    display: none;
+    right: 1em;
+    z-index: 20;
+  }
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 62em) {
+  .header-menu {
+    display: none;
+    position: relative;
+  }
+  .toggle-img {
+    position: absolute;
+    display: flex ;
+    justify-items: flex-end;
+     width: 2.5em;
+    height: 2em;
+    font-size: small;
+  }
+  .header_icon {
+    padding-right: 2.5em;
+  }
+
+  .toggle-img {
+    @include both(); 
+   
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .header_icon {
+    padding-right: 2.5em;
+ 
+    .search-icon {
+      font-size: 0.897em;
+    }
+  }
+  .logo {
+    width: 4em;
+  }
+ 
+  .toggle-img {
+    @include both()   
+  }
+  .login_img {
+    font-size: 10px;
+  }
+ 
+  // .shopping_cart {
+  //   // margin-right: 2em !important;
+  // }
+  // .ant-btn.ant-btn-icon-only .anticon {
+  //   font-size: 14em !important;
+  // }
+}
+
+@media only screen and (max-width: 332px) {
+  .header_icon {
+    padding-right: 2em;
+    .search-icon {
+      font-size: 0.597em;
+    }
+  }
+  .logo {
+    width: 2.5em;
+  }
+}

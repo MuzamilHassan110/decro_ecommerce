@@ -1,0 +1,145 @@
+@import "../../SCSS/colorVariables";
+$broder-color:  #efefef ;
+
+@mixin shop-btn () {
+  display: flex;
+  justify-content: center;
+  border-radius: 0%;    
+  border: none ;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: rgb(209, 203, 203);
+  color: $primary-color;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &:hover {
+    color: $secondary-color !important;
+  }
+}
+.shop-siderbar {
+  border: 1px solid $broder-color;
+  margin: 0.893em;
+  padding: 1em;
+  max-width: 17.625rem;
+ 
+  .sidebar-toggle {
+    margin: 1rem;
+    font-size: 1em;
+    font-weight: 500;
+    white-space: nowrap ;
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+  .sidebar-category {
+    margin: 1rem;
+  }
+  .ant-radio-wrapper span.ant-radio + * {
+    line-height: 2.5rem ;
+    margin: 8px;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .ant-radio-wrapper .ant-radio-checked::after {
+    border-color: $secondary-color;
+  }
+
+  .sidebar-sorting {
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) {
+      @include shop-btn()
+}
+  }
+}
+
+.btn-sidebar-close {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.response-toggle {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  left: 0.5 rem;
+  width: 2.5rem;
+  height: 2rem;
+}
+
+
+
+@media (max-width: 62em) {
+  .shop-siderbar{
+    .sidebar-sorting
+    {
+      :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+        {    
+        font-size: 0.928em ;
+        font-weight: 600  ;
+        
+      }
+    }
+  }
+ 
+.shop-siderbar {
+  font-size: 0.890em;
+}
+.sidebar-toggle{
+ gap: 8px ;
+
+}
+  
+  .categroy {
+    font-weight: 500 !important;
+  }
+}
+
+
+@media (max-width: 48em) {
+  .response-toggle {
+    position: relative;
+    display: block;
+    z-index: 20 ;
+    margin-bottom: 3em ;
+     }
+  .shop-siderbar {
+    display: none;   
+  }
+
+  .sidebar-toggle {
+    margin-bottom: 1rem;
+    font-size: 0.834rem ;
+    font-weight: 500 ;
+   
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+    .ant-btn-default {
+      border-radius: 0% ;
+      border: none ;
+    }
+  }
+  .sidebar-sorting {
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) {
+      @include shop-btn()
+}}
+ 
+  .ant-btn.sidebar-sorting {
+    padding: 5px 5px ;
+  }
+
+  .ant-radio-wrapper span.ant-radio + * {
+    line-height: 1rem ;
+    margin: 8px;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+
+  .title-brand {
+    margin-top: 8px;
+    font-size: 12px ;
+  }
+}

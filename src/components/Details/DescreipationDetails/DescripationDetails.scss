@@ -1,0 +1,53 @@
+@import "../../SCSS/colorVariables";
+$color: #7a7a7a;
+
+.ant-tabs{
+  .ant-tabs-tab {
+    color: #7a7a7a ;
+    font-weight: 600 ;
+    font-size: 1.5rem ;
+  }
+}
+
+%common-properties {
+  margin-top: 2rem;
+  color: $color;
+}
+
+.descripation-details-tab {
+  @extend %common-properties;
+}
+.product-details-tab {
+  @extend %common-properties;
+}
+
+.reviews-details-tab {
+  @extend %common-properties;
+}
+.custom-details-tab {
+  @extend %common-properties;
+}
+.custom-details-tab2 {
+  @extend %common-properties;
+}
+
+.pro-data-sheet {
+  margin-top: 2.3rem;
+  .data-sheet {
+    font-weight: 800;
+    color: $primary-color;
+  }
+}
+
+.data-sheet-grid {
+  margin-top: 7px;
+  padding: 10px 0px;
+  background-color: $white-color;
+  color: $color;
+}
+
+@media only screen and (max-width: 62em) {
+  .video {
+    margin-top: 2em ;
+  }
+}

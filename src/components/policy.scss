@@ -1,0 +1,25 @@
+
+@media only screen and (max-width: 62em) {
+    .policy_image{
+        display: flex;
+        gap: 3.9em ;
+        font-size: 1em ;
+    }
+    .svg{
+        width: 50px ;
+    }
+    
+}
+
+@media only screen and (max-width: 380px) {
+    .policy_image{
+        display: flex;
+        gap: 2.5em ;
+        font-size: 1em ;
+      
+    }
+    .svg{
+        width: 50px ;
+    }
+    
+}

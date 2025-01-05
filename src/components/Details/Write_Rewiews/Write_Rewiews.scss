@@ -1,0 +1,113 @@
+@import "../../SCSS/colorVariables";
+
+.rewiews-container {
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled){
+    line-height: 1em;
+    border: none;
+    padding: 1em;
+    background-color: $white;
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+      border-color: none;
+      color: $light-orange ;
+      background-color: none;
+    }
+  }
+}
+.reivews-des-box {
+  .reivews_image {
+    width: 100%;
+    height: 300px;
+    background-color: $light-gray;
+    border-radius: 0.724em;
+  }
+  .image-name {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 1em;
+    color: $gray;
+  }
+
+  .image-des {
+    text-align: center;
+    color: $gray;
+    margin-top: 1em;
+    font-size: 11px;
+  }
+}
+
+.form_rewiews {
+  .title {
+    width: 100%;
+    max-width: 80%;
+    height: 40px;
+  }
+  .comment {
+    width: 100%;
+    max-width: 80%;
+  }
+  .ant-input-outlined {
+    border: none;
+    border: 1px solid $gray;
+    border-radius: 0%;
+  }
+}
+
+%common-properties {
+  border-radius: 0px;
+  margin-top: 0%;
+  font-size: 20px;
+  padding: 0px 20px;
+  font-weight: 600;
+  height: 2em;
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.rewiews-button {
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(
+      :disabled
+    ):not(.ant-btn-disabled) {
+    @extend %common-properties;
+    background-color: $light-gray;
+    margin-right: 1rem;
+  }
+  .ant-btn.btn-submit {
+    @extend %common-properties;
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.model-rateing {
+  font-size: small;
+  color: $secondary-color;
+}
+
+@media (max-width: 950px) {
+  .reviews_image_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .reivews-des-box {
+    text-align: center;
+  }
+  .quntity_rewiews {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form_rewiews {
+    align-items: center;
+    margin-left: 4rem;
+  }
+}

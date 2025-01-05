@@ -1,0 +1,17 @@
+%common-properties {
+  padding: 0%;
+  margin: 0%;
+}
+
+.container {
+  max-width: 80%;
+  margin: 2rem auto;
+
+  .carousel_comp {
+    @extend %common-properties;
+  }
+
+  .descripation {
+    @extend %common-properties;
+  }
+}

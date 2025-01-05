@@ -1,0 +1,278 @@
+// Variables
+$border-radius: 20px;
+$border-color: #bbb5b5;
+$button-color: #bbb5b5;
+$button-bg-color: #fff;
+$input-padding: 8px 12px;
+$input-width: 100%;
+$input-border-radius: 5px;
+$btn-margin-top: 0.625em;
+$font-weight-bold: 600;
+$font-size-large: 1.2em;
+$font-color-primary: #bbb5b5;
+$log-out-color: #eb7025;
+$account-border-bottom-color: #423f3f;
+$auth-image-border-color: rgb(204, 195, 195);
+$gap-small: 0.125em;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  width: $input-width;
+  background-color: $button-bg-color;
+  color: $button-color;
+  border-color: $border-color;
+  font-weight: $font-weight-bold;
+  height: 3em;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $button-bg-color;
+    color: $button-color;
+    border-color: $border-color;
+  }
+}
+
+@mixin input-style($width: $input-width) {
+  display: flex;
+  justify-content: center;
+  border-radius: $input-border-radius;
+  padding: $input-padding;
+  width: $width;
+}
+
+@mixin form-item-required {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-large !important;
+}
+
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+// Styles
+.ant-drawer-header-title {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.login_form {
+  .login_title {
+    margin-bottom: 1em;
+    .ant-typography {
+      margin: 0;
+    }
+  }
+  .login_field {
+    .ant-input {
+      @include input-style(22em);
+    }
+    .sign_data {
+      .ant-input {
+        @include input-style(15em);
+      }
+      .ant-input-affix-wrapper {
+        @include input-style(15em);
+        padding: 0 12px;
+      }
+    }
+  }
+
+  .login_container {
+    width: 100%;
+    max-width: 100%;
+
+    .auth_btn {
+      :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(
+          :disabled
+        ):not(.ant-btn-disabled) {
+        background-color: #eb7025;
+        width: 12em;
+        color: white;
+        height: 3em;
+        font-weight: 500;
+        &:hover {
+          background-color: black;
+          border-color: black;
+          color: white;
+        }
+      }
+    }
+
+    .login_form {
+      border: 1px solid $border-color;
+      @include border-radius;
+      margin-top: 1em;
+
+      .ant-form-item .ant-form-item-label > label::after {
+        content: "";
+      }
+
+      .ant-input {
+        @include input-style;
+      }
+
+      .ant-input-affix-wrapper {
+        @include input-style;
+        padding: 0 12px;
+      }
+    }
+
+    .btn_ {
+      margin-top: 1em;
+      width: 15em;
+
+      .ant-btn {
+        @include flex-center;
+        @include button-style;
+      }
+
+      .facebook {
+        width: 30px;
+        height: 20px;
+      }
+    }
+  }
+
+  .account_border_bottom {
+    border-bottom: 2px solid $account-border-bottom-color;
+  }
+
+  .login_bottom {
+    @include flex-center;
+    flex-direction: column;
+    gap: $gap-small;
+  }
+
+  .auth_image {
+    border: 1px solid $auth-image-border-color;
+    @include border-radius;
+  }
+
+  .login_image {
+    @include border-radius;
+  }
+
+  .ant-input-affix-wrapper {
+    @include input-style(22em);
+    padding: 0 12px;
+  }
+
+  .ant-form-item-required {
+    @include form-item-required;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0px;
+  }
+}
+
+.btn_login {
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(
+      :disabled
+    ):not(.ant-btn-disabled) {
+    margin-top: 0.825em;
+    width: 15em;
+    height: 3em;
+    font-weight: $font-weight-bold;
+    font-size: 1em;
+    color: $button-bg-color;
+    background-color: $log-out-color;
+
+    &:hover {
+      border-color: $button-bg-color;
+      color: $button-bg-color;
+      background-color: black;
+    }
+  }
+}
+.login_title {
+  .login_res {
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .login_title {
+    .login_res {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+  }
+  .login_container {
+    .btn_ {
+      width: 15em;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .login_title {
+    .login_res {
+      font-size: 2em;
+      font-weight: 700;
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .login_title {
+    .login_res {
+      font-size: 1em;
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .login_title {
+    .login_res {
+      font-size: 1em;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 36em) {
+  .login_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .btn_ {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .login_form {
+    .signup {
+      font-size: large;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .login_form {
+    max-width: 80%;
+    margin-left: 3em;
+  }
+}
+
+@media only screen and (max-width: 662px) {
+  .login_form {
+    max-width: 100%;
+    margin-left: 0%;
+  }
+}
+@media (max-width: 480px) {
+  .sign_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

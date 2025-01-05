@@ -1,0 +1,147 @@
+@import "../SCSS/colorVariables";
+
+// Define color map
+$colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  white: $white-color
+);
+
+// Function to get color from map
+@function color($name) {
+  @return map-get($colors, $name);
+}
+
+// Mixin for flex center alignment
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin for transition
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Mixin for absolute positioning
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  @if $top {
+    top: $top;
+  }
+  @if $right {
+    right: $right;
+  }
+  @if $bottom {
+    bottom: $bottom;
+  }
+  @if $left {
+    left: $left;
+  }
+}
+
+.container {
+  .card-show {
+    position: relative;
+
+    .add-to-card {
+      @include absolute(null, null, 4em, 8px);
+      border: 1px solid #{color(primary)};
+      width: calc(100% - 15px);
+      background-color: #{color(primary)};
+      color: #{color(white)};
+      border-radius: 0%;
+      height: 3.789em;
+      box-shadow: none;
+      @include flex-center;
+      font-weight: 600;
+      gap: 0.425em;
+      opacity: 1;
+      @include transition(bottom 0.5s, opacity 0.5s);
+      display: block;
+
+      &:hover {
+        background-color: #{color(secondary)};
+        border-color: #{color(secondary)};
+        color: #{color(white)};
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      .add-to-card {
+        display: flex;
+      }
+    }
+
+    .heartImage {
+      @include absolute(1em, 2em);
+      font-size: 1.325em;
+      color: #{color(primary)};
+      border-radius: 50%;
+      padding: 4px;
+      background-color: #{color(white)};
+      width: 2em;
+      height: 2em;
+
+      .heart-icon {
+        @include absolute(0.588em, null, null, 0.475em);
+      }
+
+      &:hover {
+        background-color: #{color(primary)};
+        cursor: pointer;
+        color: #{color(white)};
+      }
+    }
+
+    .product-title {
+      font-size: 0.965em;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 0.825rem;
+    }
+
+    .product-price {
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.825em;
+      padding: 0.49em 0;
+      padding-bottom: 0.59em;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 17.625em;
+      object-fit: fill;
+      padding: 4px;
+      height: 300px ;
+      background-color: #F6F6F6;
+      border-radius: 0.725em;
+    }
+  }
+}
+
+.show-allProducts {
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) 
+  {
+    border: none ;
+    box-shadow: none ;
+    font-weight: 700;
+    font-size: 1em;
+
+    .all_products_btn {
+      border-bottom: 2px solid red ;
+    }
+
+    &:hover {
+      .all_products_btn {
+        border-width: 3px ;
+        margin-bottom: -1em ;
+      }
+      color: black ;
+    }
+  }
+}
+

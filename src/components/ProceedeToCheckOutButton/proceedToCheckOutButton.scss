@@ -1,0 +1,42 @@
+@import "../SCSS/colorVariables";
+.procced-to-check-out{
+  :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled) {
+  border-radius: 0% ;
+  color: $white-color;
+  background-color: $primary-color;
+  padding: 0px 4rem;
+  line-height: 1;
+  font-size: 1rem;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  box-shadow: none ;
+  margin-top: 1rem;
+  width: 100%;
+  &:hover {
+    background-color: $secondary-color ;
+    color: $white-color ;
+    border-color: $secondary-color ;
+  }
+}
+}
+
+@media only screen and (max-width: 75em ) and (min-width: 62em){
+    .procced-to-check-out{
+      :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+        font-size: 0.928em;
+        padding: 1.5rem ;
+        line-height: 0;
+      }    
+       
+    }
+}
+
+@media only screen and (max-width: 568px) {
+  .procced-to-check-out{
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    width: 100% !important;     
+    background-color: rebeccapurple !important;
+    }
+    }
+}
+

@@ -1,0 +1,206 @@
+@import "../SCSS/colorVariables";
+
+.container {
+  .shopping_price {
+    margin-top: 0.625em;
+    .ant-typography + h5.ant-typography {
+      margin-top: 0px;
+    }
+  }
+
+  .shop_input {
+    .button_container {
+      display: flex;
+      align-items: center;
+      background: $white-color;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+
+      button {
+        width: 80px;
+        height: 50px;
+        border: none;
+        background-color: $secondary-color;
+        color: $white-color;
+        font-size: 20px;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $primary-color;
+        }
+
+        &:active {
+          background-color: black;
+        }
+      }
+      input {
+        width: 50px;
+        height: 50px;
+        border: none;
+        text-align: center;
+        font-size: 18px;
+        outline: none;
+      }
+    }
+  }
+  .shopping_item {
+    .ant-typography + h5.ant-typography {
+      margin: 0%;
+    }
+  }
+
+  .shopping_tax {
+    .ant-typography + h5.ant-typography {
+      margin: 0%;
+    }
+  }
+  .shopping_incl_tax {
+    .ant-typography + h5.ant-typography {
+      margin: 0%;
+    }
+  }
+  .shopping_title_price {
+    .ant-typography {
+      white-space: nowrap;
+    }
+  }
+  .delete_shopp {
+    margin-left: 3em;
+  }
+  .lg_res {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .shopping_btn {
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default {
+      width: 100%;
+      max-width: 30%;
+      height: 3em;
+      border: none;
+      background-color: $secondary-color;
+      font-weight: 600;
+      font-size: 1.3em;
+      color: $white-color;
+      border-radius: 0%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+
+      &:active {
+        background-color: $primary-color;
+      }
+    }
+  }
+  .btn_continue_shoping {
+    :where(.css-dev-only-do-not-override-djtmh8).ant-btn-default {
+      border-radius: 0px;
+      height: 3.5em;
+      width: 100%;
+      max-width: 30%;
+      font-weight: 700;
+      border: none;
+      background-color: $imge-bg-color;
+
+      &:hover {
+        background-color: #9b979763;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .ant-col-lg-2 {
+    padding: 0%;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .container {
+    .shop_input {
+      .button_container {
+        input {
+          width: 40px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 36em) {
+  .shopping_title_price {
+    .ant-typography {
+      margin-top: 0% !important;
+    }
+  }
+  .lg_res {
+    margin-left: 1em !important;
+  }
+}
+@media only screen and (max-width: 68em) {
+  .container {
+    .shop_input {
+      .button_container {
+        input {
+          width: 80px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 48em) {
+  .shopping_title_price {
+    .ant-typography {
+      margin-left: 0%;
+      margin-top: 0.238em;
+    }
+  }
+
+  .btn_continue_shoping {
+    .css-dev-only-do-not-override-djtmh8.ant-btn-default {
+      height: 4em;
+      width: 100%;
+      max-width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  // .ant-btn {
+  //   max-width: 60% !important;
+  // }
+}
+@media only screen and (max-width: 450px) {
+  .container {
+    .shop_input {
+      .button_container {
+        input {
+          width: 60px !important;
+        }
+      }
+    }
+  }
+  .btn_continue_shoping {
+    .css-dev-only-do-not-override-djtmh8.ant-btn-default {
+      max-width: 90% !important;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    .shop_input {
+      .button_container {
+        input {
+          width: 40px !important;
+        }
+      }
+    }
+  }
+}
