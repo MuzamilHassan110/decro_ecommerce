@@ -30,7 +30,6 @@ const LoginPage = () => {
  const navigate = useNavigate();
  const {cartItems} = useSelector(state => state.cartSlice)
 
- console.log("Login", cartItems.length)
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -47,7 +46,7 @@ const LoginPage = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const token = await userCredential.user.getIdToken();
       localStorage.setItem('authToken', JSON.stringify(token));
-       console.log("TokenLogin", JSON.stringify(token))
+       
       if(userCredential.user.uid){
         toast.success("User Logged in successfully !! ", {
           position: "top-center",
